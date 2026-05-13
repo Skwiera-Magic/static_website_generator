@@ -6,7 +6,7 @@ class HTMLNode:
         self.props = props
 
     def to_html(self):
-        raise Exception(NotImplementedError)
+        raise NotImplementedError("to_html not implemented")
 
     def props_to_html(self):
         if self.props == None:
@@ -17,5 +17,4 @@ class HTMLNode:
         return props
 
     def __repr__(self):
-        node = HTMLNode
-        print(node)
+        return f"HTMLNode(tag={self.tag}, value={self.value}, children={self.children}, props={self.props})"

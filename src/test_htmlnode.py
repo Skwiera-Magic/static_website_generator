@@ -2,7 +2,7 @@ import unittest
 
 from htmlnode import HTMLNode
 
-class TestTextNode(unittest.TestCase):
+class TestHTMLNode(unittest.TestCase):
     def test_props_to_html01(self):
         node = HTMLNode("a", "click me", [], {"href": "https://www.google.com", "target": "_blank"})
         self.assertEqual(node.props_to_html(), ' href="https://www.google.com" target="_blank"')
