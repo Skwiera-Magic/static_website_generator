@@ -2,6 +2,7 @@ import unittest
 
 from leaf_node import LeafNode
 
+
 class TestLeafNode(unittest.TestCase):
     def test_leaf_to_html_p(self):
         node = LeafNode("p", "Hello, world!")
@@ -33,6 +34,7 @@ class TestLeafNode(unittest.TestCase):
         node = LeafNode(None, None)
         with self.assertRaises(ValueError):
             node.to_html()
+
 
 if __name__ == "__main__":
     unittest.main()

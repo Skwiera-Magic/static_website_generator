@@ -46,5 +46,6 @@ class TestSplitNodesDelimiter(unittest.TestCase):
         with self.assertRaises(ValueError):
             split_nodes_delimiter([node], "`", TextType.CODE)
 
+
 if __name__ == "__main__":
     unittest.main()

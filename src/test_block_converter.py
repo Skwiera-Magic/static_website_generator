@@ -2,6 +2,7 @@ import unittest
 
 from block_converter import markdown_to_blocks
 
+
 class TestBlockConverter(unittest.TestCase):
     def test_markdown_to_blocks(self):
         md = """
