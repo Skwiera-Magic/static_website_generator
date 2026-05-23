@@ -1,16 +1,9 @@
 from text_node import TextNode, TextType
-
-print("hello world")
+from static_to_public_copier import clean_and_copy
 
 
 def main():
-    textnode = TextNode(
-        text="Is this working?",
-        text_type=TextType.BOLD,
-        url="www.google.com",
-    )
-
-    print(textnode)
+    clean_and_copy("./static", "./public")
 
 
 if __name__ == "__main__":

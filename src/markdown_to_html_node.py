@@ -15,7 +15,7 @@ def markdown_to_html_node(markdown):
         lines = block.split("\n")
         tag = ""
         value = ""
-        
+
         if block_type == BlockType.HEADING:
             level = len(block.split(" ")[0])
             tag = f"h{level}"
@@ -51,6 +51,7 @@ def markdown_to_html_node(markdown):
             continue
         nodes.append(ParentNode(tag, text_to_children(value)))
     return ParentNode("div", nodes)
+
 
 def text_to_children(text):
     text_nodes = text_to_textnodes(text)
