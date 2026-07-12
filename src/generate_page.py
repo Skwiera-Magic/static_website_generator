@@ -23,3 +23,14 @@ def generate_page(from_path, template_path, dest_path):
     print(f"Generating page: {from_path}\nTo: {dest_path}")
     with open(dest_path, "x") as output_html:
         output_html.write(output_text)
+
+
+def generate_pages_recursive(dir_path_content, template_path, dest_dir_path):
+    for entry in os.listdir(dir_path_content):
+        from_path = os.path.join(dir_path_content, entry)
+        dest_path = os.path.join(dest_dir_path,entry)
+        if os.path.isfile(from_path):
+            dest_path = Path(dest_path).with_suffix(".html")
+            generate_page(from_path, template_path, dest_path)
+        else:
+            generate_pages_recursive(from_path, template_path, dest_path)
